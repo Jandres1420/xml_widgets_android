@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--MUYYY IMPORTANTE ACA NO SE ESTA CAMBIANDO EL COLOR ACA ESATMOS REFERENCIANDO OTRO DRAWABLE-->
+<!--EL CUAL TIENE LA PARTE VISUAL, -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rb_bicycle_on" android:state_checked="true"/>
+    <item android:drawable="@drawable/rb_bicycle_off" android:state_checked="false"/>
+</selector>

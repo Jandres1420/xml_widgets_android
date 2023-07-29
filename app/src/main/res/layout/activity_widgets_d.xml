@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WidgetsD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <VideoView
+                android:id="@+id/videoLocal"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <VideoView
+                android:id="@+id/videoWeb"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:backgroundTint="@color/perro"/>
+        <!--        IMPORTANTE EL WEB VIEW DEBERIA DE ESTAR EN UN ACTIVITY PROPIO PERO AL ESTAR PROBANDO TODLOS LOS WIDGETS EN UN MISMO ACTIVITY LO DEJAREMOS ACÁ-->
+            <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="1500dp"
+            tools:ignore="WebViewLayout"
+            />
+        <!--         la forma de llamar a la imagen es con el src-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:src="@drawable/juanes"/>
+<!--        forma de modificar una image view-->
+<!--        para modificarla no se usa un drawaable si no un style, y ahi se le da la forma-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpidey"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/spidey2"
+            app:shapeAppearanceOverlay="@style/Circular"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpidey2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/spidey2"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:strokeColor="@color/perro"
+            app:strokeWidth="10dp"
+            />
+        <!--        roundedSquare se le da un porcentaje pequeño en ell estilo -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpidey3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/spidey2"
+            app:shapeAppearanceOverlay="@style/roundedSquare"
+            app:strokeColor="@color/perro"
+            app:strokeWidth="10dp"
+            />
+        <!--corner cut, se elimina la esquina , otro estilo,perop ya no esta redondeada-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpidey4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/spidey2"
+            app:shapeAppearanceOverlay="@style/cornerCut"
+            app:strokeColor="@color/perro"
+            app:strokeWidth="10dp"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpidey5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/spidey2"
+            app:shapeAppearanceOverlay="@style/DiamondCut"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpidey6"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/spidey2"
+            app:shapeAppearanceOverlay="@style/SpecificCornerCut"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivSpidey7"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/spidey2"
+            app:shapeAppearanceOverlay="@style/SpecificCornerRounded"
+            />
+
+    </LinearLayout>
+</ScrollView>

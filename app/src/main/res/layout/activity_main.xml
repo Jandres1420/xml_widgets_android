@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    tools:context=".MainActivity">
+<!--    texstyle es para el tipo de letra cursiva negrilla y demás-->
+<!--    para combinar dos textsyle se usa el | , para textos el size es mejor dejarlo con sp-->
+<!--    wrap content se adapta a lo que tiene, match parent seria la anchura del padre-->
+<!--    all caps todo en mayuscula-->
+<!--    textaparence que se reconozca como titulo, subtitlo y demás -->
+
+    <!--    ems indica la anchura que le vamos a dar, pero si se ponen mas caracteres que la anchura se va a desplazar el texto y no va a cambiar el ancho -->
+<!--    hint para mostrar una pista de que se necesita que ingrese el usuario en este campo -->
+<!--    en edit textsi se pone un textInput type textCapSentences , da el primer valor en mayuscula y-->
+<!--    el usuario no lo tiene que poner por el mismo-->
+<!--&lt;!&ndash;    digits nos permite decir que se puede ingresar en este campo por ejempo numeros y espacios nada más &ndash;&gt;-->
+<!--    android:digits="01234567899 "-->
+<!--    gravity  el texto se pone centra, o dependiendo que le pongamos-->
+<!--    padding top y buttom da una margent entre el texto -->
+
+    <TextView
+        android:id="@+id/tvMillos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fasthand"
+        android:text="hola bb que más pues!"
+
+        android:textAllCaps="true"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/editEjemplo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stylle_etbg"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="10dp"
+        android:ems="14"
+        android:gravity="center"
+        android:hint="Ingresa tu nombre"
+        android:inputType="textCapSentences|textAutoCorrect"
+        android:paddingTop="10sp"
+        android:paddingBottom="10dp"
+        android:text=""
+        android:textColorHint="@color/morado"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="65dp" />
+<!--    importante la diferencia esta en el tipo android:inputType porque todas son edittext-->
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="248dp"
+        android:hint="email address"/>
+
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="306dp" android:hint="text phone"/>
+
+    <EditText
+        android:id="@+id/editTextNumberPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="185dp"
+        android:hint="number password"/>
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="359dp"
+        android:hint="text postal address"/>
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="127dp" android:hint="password"/>
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="418dp" android:hint="multiple line"/>
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="474dp" android:hint="text time"/>
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="526dp" android:hint="text date"/>
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="579dp" android:hint="text number" />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="633dp" android:hint="edit text number signed"/>
+<!--    comprueba los datos con el array que tengamos en kotlin segun lo que vaya escribiendo la persona-->
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="AutoCompleteTextView" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MultiAutoCompleteTextView" />
+
+
+</LinearLayout>

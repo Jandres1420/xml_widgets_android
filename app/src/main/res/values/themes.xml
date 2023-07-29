@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TrainingAndroid" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/naranja</item>
+    </style>
+
+    <style name="Theme.TrainingAndroid" parent="Base.Theme.TrainingAndroid" />
+    <style name="chipGroupEntry" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/ch_textcolor</item>
+        <item name="chipBackgroundColor">@color/gold</item>
+        <item name="chipStrokeColor">@color/black</item>
+        <item name="chipStrokeWidth">2dp</item>
+
+
+    </style>
+</resources>

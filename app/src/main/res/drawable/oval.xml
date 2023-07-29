@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval" android:innerRadius="10dp">
+            <solid android:color="@color/vinotinto"/>
+            <size android:width="120dp" android:height="120dp"/>
+        </shape>
+<!--        con solid se puede dar el color a un drawable-->
+
+    </item>
+</selector>

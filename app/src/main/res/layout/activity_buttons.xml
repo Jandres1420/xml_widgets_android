@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buttons">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--        no entienden mayusculas-->
+        <!--        el color por default que toma el button lo toma de la carpeta themes -->
+        <!--        el borde que tiene al seleccionar hacia arriba ya abajo es el padding-->
+        <!--        backgroundTint para cambiar el color del contenido del boton-->
+        <!--        background solo pone el color del boton completamente en naranja y se pierde el estilo-->
+        <!--        los botones tienen limitante y para poder quitarñp se inicaliza con android.widget.button-->
+        <!--        porque tocaria hacerlo asi? porque android se rige por la naturalezea si no quisieramos un botton de esta manera estariamos haciendo un textview-->
+        <Button
+            android:id="@+id/buttonOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/naranja"
+            android:backgroundTint="@color/morado"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:gravity="center"
+            android:text="Iniciar Sesion"
+            android:textColor="@color/black" />
+
+        <!--        la forma adecuada de darle estilo a un boton es un drawable y ponerlo en la propidead background -->
+        <!--        en el lado del drawable se puede moldear todo el template que se usara en el boton, en este caso una esquina no es redonda porque asi lo puse en corners.xml-->
+
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners"
+            android:backgroundTint="@color/morado"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:gravity="center"
+            android:text="Iniciar Sesion"
+            android:textColor="@color/red"/>
+        <!--        Otro ejemplo pero el drawable en este caso va hacer un oval -->
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:gravity="center"
+            android:text="Iniciar Sesion"
+            android:textColor="@color/white"/>
+        <!--        Otro ejemplo pero el drawable en este caso va tener un degradado -->
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:gravity="center"
+            android:text="Iniciar Sesion"
+            android:textColor="@color/white"/>
+        <!-- botones con imagenes, no se puede poner texto, para poder hacerlo tocaria igual android.widget-->
+        <!--            tiene sus aspectos por default como el padding y demás-->
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/perro"
+            app:srcCompat="@drawable/baseline_email_24" />
+
+        <!--            chip group son un grupo de chip(de botones) para filtrado y demás y este contiene chip que es cada uno de los valores  -->
+<!--        taodos deberian tener un mismo estilo -->
+
+        <!--    selector xml, nos permite poder cambiar un atributo estableciendo una condicion desde xml-->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chgroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.chip.Chip
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deporte"
+                app:chipIcon="@drawable/pistol"
+                style="@style/chipGroupEntry"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/series"
+                style="@style/chipGroupEntry"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/drama"
+                style="@style/chipGroupEntry"/>
+        </com.google.android.material.chip.ChipGroup>
+<!--        en un radio group solo puede estar una seleccionada-->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/radioGroup">
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Playa"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    />
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Montaña"
+                android:onClick="onRadioButtonClicked"
+                />
+        </RadioGroup>
+
+<!--        primer paso que debe hacerse es el selector donde se dira si esta seleccionado o no -->
+<!--        con el  android:button="@null" estamos ocultando la pelotica del radio button-->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/rgOptions"
+            android:layout_marginTop="15dp"
+            android:checkedButton="@id/rbBicycle">
+            <RadioButton
+                android:id="@+id/rbCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/rb_car_bg"
+                />
+            <RadioButton
+                android:id="@+id/rbAirplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/rb_airplane_bg"
+               />
+            <RadioButton
+                android:id="@+id/rbBicycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/rb_bicycle_bg"
+                />
+        </RadioGroup>
+<!--        lo mismo si queremos cambiarle la naturaleza y que no siga el color default del theme.xml
+            lo ponemos como android.widget.
+            con enable false queda inutilizado el checkbox
+-->
+        <CheckBox
+            android:id="@+id/cbSeguro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seguro de viaje"
+            android:buttonTint="@color/red"
+            android:enabled="false"
+            android:button="@drawable/cb_custom"
+            android:onClick="onCheckBoxButtonClicked"/>
+        <CheckBox
+            android:id="@+id/cbCancelable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reserva cancelada"
+            android:checked="true"
+            android:buttonTint="@color/perro"
+            android:button="@drawable/cb_custom"
+            android:onClick="onCheckBoxButtonClicked"/>
+<!--        Se enciende y apaga es igual que el checkbox pero pues visualmente es distinta-->
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOn="Si"
+            android:textOff="No"
+            android:checked="true"/>
+<!--        estamos personalizandolos, pero para ello toca modificar las dimensiones-->
+        <ToggleButton
+            android:id="@+id/toggleButtonPersonalized"
+            android:layout_width="72dp"
+            android:layout_height="38dp"
+            android:textOn=""
+            android:textOff=""
+            android:checked="true"
+            android:background="@drawable/bg_travel"/>
+<!--        thumb es el metodo de cambiar en un switch-->
+        <Switch
+            android:id="@+id/swNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notificar cambios por email"
+            android:thumb="@drawable/baseline_email_24"
+            android:thumbTint="@color/perro"
+            android:track="@color/naranja"
+            />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swPersonalized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Off"
+            android:textOn="On"
+            android:text="Notificion de cambio"
+            app:showText="true"
+            android:checked="true"
+            android:thumb="@drawable/sw_thumb"
+            app:track="@drawable/sw_track"
+            />
+<!--        este boton es muy especial porque se va a superponer encima de los demas-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/nintendo_game_boy"
+            android:layout_gravity="right"/>
+
+
+    </LinearLayout>
+</ScrollView>
