@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    esto es para cambiar explicitamente el fondo-->
+    <item android:id="@android:id/background"
+        android:gravity="center_vertical|fill_horizontal">
+        <shape android:shape="rectangle"
+            android:tint="@color/perro">
+            <corners android:radius="8dp"/>
+            <size android:height="20dp"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress"
+        android:gravity="center_vertical|fill_horizontal">
+<!--        el scale lo que hace que el progress no ocupe todo el ancho si no la parte del progreso que lleva-->
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item android:state_enabled="false"
+                    android:drawable="@android:color/transparent"/>
+                <item>
+                    <shape android:shape="rectangle"
+                        android:tint="@color/naranja">
+                        <corners android:radius="8dp"/>
+<!--                        el size se tuvo en cuenta con el size del sb_thumg el drawable que creamos con anterioridad-->
+<!--                        ya que si se vuelve de color naranja significa que esta avanzando porque el heigh normal seria de 20dp-->
+                        <size android:height="24dp"/>
+                    </shape>
+                </item>
+            </selector>
+        </scale>
+    </item>
+<!--    esto cambiara el proceso -->
+</layer-list>

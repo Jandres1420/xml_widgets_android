@@ -11,38 +11,167 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-            <VideoView
-                android:id="@+id/videoLocal"
-                android:layout_width="match_parent"
-                android:layout_height="250dp" />
 
-            <VideoView
-                android:id="@+id/videoWeb"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:backgroundTint="@color/perro"/>
+<!--        view ocultas para mirarlas solo toca abrir < -->
+        <Chronometer
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TimePicker
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/gold" />
+        <View
+            android:id="@+id/dividerVertical"
+            android:layout_width="4dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@color/gold" />
+        <!--        es para poner rating de estrellas, y para poner el numero de estrellas usamos numstar-->
+        <!--        stepsize nos da la posibilidad que de cuanto en cuanto se puede poner estrellas-->
+        <!--        is indicator false, dejamos que la persona lo manipule, si esta en true es solo para mostrar en cuanto esta-->
+        <RatingBar
+            android:id="@+id/rbExpample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/perro"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressTint="@color/gold"
+            android:rating="3"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Estrellas seleccionadas: " />
+
+        <SeekBar
+            android:id="@+id/sbNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progress="30"
+            android:progressBackgroundTint="@color/perro"
+            android:progressTint="@color/red"
+            android:thumb="@drawable/bicycle"
+            android:thumbTint="@color/morado" />
+        <!--        thumb el logito o la bolita que el usuario mueve-->
+        <SeekBar
+            android:id="@+id/sbCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="30"
+            android:progressDrawable="@drawable/sb_progress_bg"
+            android:thumb="@drawable/sb_thumb" />
+        <!--        PROGRESS IGUAL EL COMIENZO , Y EL MAX LO MAXIMO QUE LLEGARIA EL SEEKBAR, LO UNICO QUE CAMBIA ES EL STYLE-->
+        <SeekBar
+            android:id="@+id/seekBar2"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="3" />
+        <!--        hay diferentes progress bar pero lo unico que cambia es una propiedad la cual cambia el estilo-->
+        <!--        en style android:attr/progressBarStyle-->
+        <ProgressBar
+            android:id="@+id/pbSmall"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/pgLarge"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--        la horizontal tiene un una proppiedad indeterminate no se sabe si queda pocoo o mucho -->
+        <ProgressBar
+            android:id="@+id/pbIndeterminate"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/naranja" />
+        <!--        la propiedad max es el punto maximo al que llegara el progress bar y la propiedad progress desde donde inicia-->
+        <!--        progressbackgroundtint cambia el fondo y el color de la barra progress tint-->
+        <ProgressBar
+            android:id="@+id/pbDeterminate"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="300"
+            android:progress="100"
+            android:progressBackgroundTint="@color/red"
+            android:progressTint="@color/perro_apagado" />
+        <!--        barra de progreso de progreso secundario, "CUANTO LLEVAS CON EL PROGRESSBAR"-->
+        <ProgressBar
+            android:id="@+id/pbSecundaria"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="300"
+            android:progress="100"
+            android:progressBackgroundTint="@color/gold"
+            android:progressTint="@color/morado"
+            android:secondaryProgress="130" />
+
+        <CalendarView
+            android:id="@+id/cvEjemplo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Fecha seleccionada: " />
+
+
+
+        <VideoView
+            android:id="@+id/videoLocal"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <VideoView
+            android:id="@+id/videoWeb"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:backgroundTint="@color/perro" />
         <!--        IMPORTANTE EL WEB VIEW DEBERIA DE ESTAR EN UN ACTIVITY PROPIO PERO AL ESTAR PROBANDO TODLOS LOS WIDGETS EN UN MISMO ACTIVITY LO DEJAREMOS ACÁ-->
-            <WebView
+        <WebView
             android:id="@+id/webView"
             android:layout_width="match_parent"
-            android:layout_height="1500dp"
-            tools:ignore="WebViewLayout"
-            />
+            android:layout_height="1000dp"
+            tools:ignore="WebViewLayout" />
         <!--         la forma de llamar a la imagen es con el src-->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:src="@drawable/juanes"/>
-<!--        forma de modificar una image view-->
-<!--        para modificarla no se usa un drawaable si no un style, y ahi se le da la forma-->
+            android:src="@drawable/juanes" />
+        <!--        forma de modificar una image view-->
+        <!--        para modificarla no se usa un drawaable si no un style, y ahi se le da la forma-->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivSpidey"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
             android:src="@drawable/spidey2"
-            app:shapeAppearanceOverlay="@style/Circular"
-            />
+            app:shapeAppearanceOverlay="@style/Circular" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivSpidey2"
@@ -52,8 +181,7 @@
             android:src="@drawable/spidey2"
             app:shapeAppearanceOverlay="@style/Circular"
             app:strokeColor="@color/perro"
-            app:strokeWidth="10dp"
-            />
+            app:strokeWidth="10dp" />
         <!--        roundedSquare se le da un porcentaje pequeño en ell estilo -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivSpidey3"
@@ -63,8 +191,7 @@
             android:src="@drawable/spidey2"
             app:shapeAppearanceOverlay="@style/roundedSquare"
             app:strokeColor="@color/perro"
-            app:strokeWidth="10dp"
-            />
+            app:strokeWidth="10dp" />
         <!--corner cut, se elimina la esquina , otro estilo,perop ya no esta redondeada-->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivSpidey4"
@@ -74,8 +201,7 @@
             android:src="@drawable/spidey2"
             app:shapeAppearanceOverlay="@style/cornerCut"
             app:strokeColor="@color/perro"
-            app:strokeWidth="10dp"
-            />
+            app:strokeWidth="10dp" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivSpidey5"
@@ -83,8 +209,7 @@
             android:layout_height="150dp"
             android:layout_margin="8dp"
             android:src="@drawable/spidey2"
-            app:shapeAppearanceOverlay="@style/DiamondCut"
-            />
+            app:shapeAppearanceOverlay="@style/DiamondCut" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivSpidey6"
@@ -92,8 +217,7 @@
             android:layout_height="150dp"
             android:layout_margin="8dp"
             android:src="@drawable/spidey2"
-            app:shapeAppearanceOverlay="@style/SpecificCornerCut"
-            />
+            app:shapeAppearanceOverlay="@style/SpecificCornerCut" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/sivSpidey7"
@@ -101,8 +225,8 @@
             android:layout_height="150dp"
             android:layout_margin="8dp"
             android:src="@drawable/spidey2"
-            app:shapeAppearanceOverlay="@style/SpecificCornerRounded"
-            />
+            app:shapeAppearanceOverlay="@style/SpecificCornerRounded" />
+
 
     </LinearLayout>
 </ScrollView>

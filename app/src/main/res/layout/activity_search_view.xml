@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--        para mostrar como en text view un poco de lo que se va a buscar usar el query hint y además iconifiedByDefault false-->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svUsers"
+        iconifiedByDefault="false"
+        queryHint="Nombre:"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/sv_bg" />
+
+    <ListView
+        android:id="@+id/lvUsers"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp" />
+
+</LinearLayout>
