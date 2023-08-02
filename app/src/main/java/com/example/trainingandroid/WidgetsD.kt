@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.CalendarView
 import android.widget.ListView
 import android.widget.MediaController
+import android.widget.NumberPicker
 import android.widget.ProgressBar
 import android.widget.RatingBar
 import android.widget.SearchView
@@ -19,6 +20,8 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.VideoView
+import com.example.trainingandroid.databinding.ActivityMainBinding
+import com.example.trainingandroid.databinding.ActivityWidgetsDBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.lang.Thread.sleep
@@ -26,9 +29,14 @@ import java.util.Calendar
 
 class WidgetsD : AppCompatActivity() {
     private lateinit var activityContext: Context
+    // el tipo es de tipo Activity y el nombre de esta clase + Binding
+    private lateinit var binding: ActivityWidgetsDBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_widgets_d)
+        // layout binding
+        binding = ActivityWidgetsDBinding.inflate(layoutInflater)
+        //entonces acá cambiaremos lo que normalmente es setContentView(R.layout.activity_widgets_d)
+        setContentView(binding.root)
         activityContext = this
 //        var ivEjemplo = findViewById<ImageView>(R.id.ivEjemplo)
 //        val imageURL = "http://jotajotavm.com/img/PREMIUM-AndroidDevelopment.gif"
@@ -117,6 +125,19 @@ class WidgetsD : AppCompatActivity() {
         ratingBarExample.setOnRatingBarChangeListener { ratingBar, rating, b ->
             textViewRatingBar.text = "Estrellas seleccionadas: ${rating}/${ratingBar.numStars}"
         }
+        var numberPickerEx = findViewById<NumberPicker>(R.id.npExample)
+        // viewbindng referencia al xml de una con el objeto binding del comienzo y el id especifico que pusimos en el xml
+
+//        var numberPickerTextView = findViewById<TextView>(R.id.tvPicker)
+        numberPickerEx.minValue = 1
+        numberPickerEx.maxValue = 99
+        numberPickerEx.value = 5
+        numberPickerEx.wrapSelectorWheel = true
+        numberPickerEx.setFormatter { i -> String.format("%02d",i) }
+        numberPickerEx.setOnValueChangedListener { numberPicker, oldValue, newValue ->
+            binding.tvPicker.text = "numero de antes $oldValue , numero nuevo $newValue"
+        }
+
 
     }
 

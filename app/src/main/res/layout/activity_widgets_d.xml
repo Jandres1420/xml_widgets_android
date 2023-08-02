@@ -11,22 +11,37 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-<!--        view ocultas para mirarlas solo toca abrir < -->
+        <!--        view ocultas para mirarlas solo toca abrir < -->
         <Chronometer
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
         <DatePicker
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
         <TimePicker
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+<!--        es uno de los más utiles-->
+        <NumberPicker
+            android:id="@+id/npExample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/numberPickerTheme"/>
+        <TextView
+            android:id="@+id/tvPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="picker:  " />
+        <!--            view horizontal separador como tal , pero es una vista sin mas-->
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:background="@color/gold" />
+
         <View
             android:id="@+id/dividerVertical"
             android:layout_width="4dp"
@@ -139,7 +154,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Fecha seleccionada: " />
-
 
 
         <VideoView
