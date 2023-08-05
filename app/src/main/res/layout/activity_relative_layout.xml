@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayout">
+<!--    relative layoutpor defecto se va a poner arriba en la esquina superior derecha -->
+<!--    referente y posicionalidad ES LO MÁS IMPORTANTE-->
+<!--    translation z es la profundidad el mandar hacia atras o adelanter en ppp-->
+<!--    layout_centerHorizontal es la forma
+ de moverse en un relativelayout (posicion con respecto al padre-->
+<!--    align es para alinearse con respecto al padre-->
+<!--    <View-->
+<!--        android:id="@+id/vA"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:background="@color/red"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"/>-->
+<!--    android:layout_above="@id/vA" con esto se referencio que estuviera por encima del -->
+<!--    si el padre se modifica el hijo va detras de el -->
+<!--    <View-->
+<!--        android:id="@+id/vB"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@color/perro"-->
+<!--        android:layout_toRightOf="@id/vA"-->
+<!--        android:layout_centerVertical="true"/>-->
+<!--    el translation no cambia el area establecida por los elementos principales-->
+    <View
+        android:id="@+id/vZ"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/green"
+        android:layout_marginBottom="10dp"
+        android:translationZ="1dp"
+        android:translationX="20dp"
+        android:translationY="20dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        />
+<!--    por logica y por como funcionan lo srelative layout se supondria que los hijos se moverian pero no
+es independiente  android:translationY ,x ,z-->
+<!--    porque el area que se reservo antes del translation esta vigente para los hijos ya que esta reservada en espacio de memoria
+pasa lo mismo con scale x el espacio de memoria ees el mismo pero visualmente cambia
+-->
+    <View
+        android:id="@+id/vA"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/perro"
+        android:layout_marginBottom="10dp"
+        android:translationY="20dp"/>
+    <View
+        android:id="@+id/vB"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@color/red"
+        android:layout_below="@id/vA" />
+    <View
+        android:id="@+id/vC"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:background="@color/morado"
+        android:layout_below="@id/vA"
+        android:layout_toRightOf="@id/vB"
+        android:layout_marginLeft="10dp" />
+    <View
+        android:id="@+id/vD"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:background="@color/red"
+        android:layout_below="@id/vB"
+        android:layout_marginTop="10dp" />
+    <View
+        android:id="@+id/vE"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@color/morado"
+        android:layout_below="@id/vB"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/vD"
+        android:layout_marginLeft="10dp" />
+    <View
+        android:id="@+id/vF"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/gold"
+        android:layout_below="@id/vD"
+        android:layout_marginTop="10dp" />
+    <View
+        android:id="@+id/vG"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:background="@color/perro"
+        android:layout_below="@id/vE"
+        android:layout_toRightOf="@id/vF"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+    <View
+        android:id="@+id/vH"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:background="@color/perro"
+        android:layout_below="@id/vG"
+        android:layout_toRightOf="@id/vF"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+    <View
+        android:id="@+id/vI"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@color/morado"
+        android:layout_below="@id/vF"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <View
+        android:id="@+id/vJ"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/perro_apagado"
+        android:layout_below="@id/vI"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

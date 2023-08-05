@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <TableRow android:background="@color/morado">
+
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="articulo"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="precio"
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Smartphone XYZ" />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="$299.99" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Camiseta de algodón" />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="$19.99" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Auriculares Bluetooth ABC" />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="$49.99"/>
+    </TableRow>
+    <View android:background="@color/morado" android:layout_height="1dp"/>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="5dp"
+            android:text="Subtotal"
+            android:textColor="@color/perro"
+            />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="$369.97"/>
+    </TableRow>
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="5dp"
+            android:text="Impuestos"
+            android:textColor="@color/perro"
+            />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="$20"/>
+    </TableRow>
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="5dp"
+            android:text="Total"
+            android:background="@color/morado"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:text="$389.97"
+            android:background="@color/morado"
+            android:textColor="@color/white"/>
+    </TableRow>
+</TableLayout>
