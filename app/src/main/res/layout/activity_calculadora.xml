@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_rowWeight="7"
+    android:layout_columnWeight="4"
+    android:columnCount="4"
+    android:rowCount="7">
+
+    <TextView
+        android:id="@+id/primerValor"
+        style="@style/AppTheme.BotonCalculadora.Total"
+        android:layout_width="match_parent"
+        android:layout_row="0"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="4"
+        android:text="Primer Valor: "
+        android:textAlignment="textStart" />
+    <TextView
+        android:id="@+id/valorTotal"
+        style="@style/AppTheme.BotonCalculadora.Total"
+        android:layout_width="match_parent"
+        android:layout_row="0"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="4"
+        android:text="Total: "
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:id="@+id/signoC"
+        style="@style/AppTheme.BotonCalculadora.Rojo"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="C"
+        android:text="C" />
+
+    <TextView
+        android:id="@+id/signoBorrar"
+        style="@style/AppTheme.BotonCalculadora.Rojo"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:drawableStart="@drawable/ic_delete"
+        android:tag="Borrar" />
+
+    <TextView
+        android:id="@+id/signoDividir"
+        style="@style/AppTheme.BotonCalculadora.Rojo"
+        android:layout_row="3"
+        android:layout_column="3"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="Dividir"
+        android:text="÷"
+        android:onClick="convertCharToCorrectOperation"/>
+
+    <TextView
+        android:id="@+id/numero7"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="9"
+        android:text="7"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero8"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="8"
+        android:text="8"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero9"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="9"
+        android:text="9"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero4"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="4"
+        android:text="4"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero5"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="5"
+        android:text="5"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero6"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="6"
+        android:text="6"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero1"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="1"
+        android:text="1"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero2"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="2"
+        android:text="2"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero3"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="5"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="3"
+        android:text="3"
+        android:onClick="convertCharToInt"/>
+
+    <TextView
+        android:id="@+id/numero0"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="0"
+        android:text="0"
+        android:onClick="convertCharToInt"/>
+    <TextView
+        android:id="@+id/simboloPunto"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="."
+        android:text="."
+        android:onClick="convertCharToInt"/>
+    <TextView
+        android:id="@+id/simboloIgual"
+        style="@style/AppTheme.BotonCalculadora.Azul"
+        android:layout_row="6"
+        android:layout_column="2"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="="
+        android:text="=" />
+    <TextView
+        android:id="@+id/signoMultiplicar"
+        style="@style/AppTheme.BotonCalculadora.Rojo"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginRight="1dp"
+        android:tag="Multiplicar"
+        android:text="x"
+        android:layout_marginTop="1dp"
+        android:onClick="convertCharToCorrectOperation"/>
+    <TextView
+        android:id="@+id/signoRestar"
+        style="@style/AppTheme.BotonCalculadora.Rojo"
+        android:layout_row="4"
+        android:layout_column="3"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginRight="1dp"
+        android:tag="Restar"
+        android:text="-"
+        android:layout_marginTop="1dp"
+        android:onClick="convertCharToCorrectOperation"/>
+    <TextView
+        android:id="@+id/signoSumar"
+        style="@style/AppTheme.BotonCalculadora.Rojo"
+        android:layout_row="5"
+        android:layout_column="3"
+        android:layout_rowSpan="2"
+        android:layout_gravity="fill"
+        android:layout_marginRight="1dp"
+        android:tag="Sumar"
+        android:text="+"
+        android:layout_marginTop="1dp"
+        android:onClick="convertCharToCorrectOperation"
+        />
+</GridLayout>
